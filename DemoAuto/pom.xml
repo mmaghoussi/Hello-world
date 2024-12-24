@@ -19,5 +19,25 @@
   <artifactId>DemoAuto</artifactId>
   
   <version>0.0.1-SNAPSHOT</version>
+  <build>
+    <plugins>
+        <!-- Plugin pour exécuter la classe Main -->
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.1.0</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>java</goal>
+                    </goals>
+                    <configuration>
+                        <mainClass>com.example.OpenLogenAvito</mainClass> 
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
   
 </project>
