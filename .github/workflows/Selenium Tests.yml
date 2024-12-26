@@ -31,15 +31,15 @@ jobs:
         distribution: 'temurin'
         overwrite-settings: false
         
+    - name: Install Dependencies
+      run: mvn install -DskipTests  # Install dependencies but skip tests for this step
+      working-directory: ./TestAuto
+      
     - name: Compile Java code
       run: javac TestAuto/src/main/java/OpenPageAv.java
 
     - name: Run Java program
       run: java TestAuto/src/main/java/OpenPageAv.java
-
-    - name: Install Dependencies
-      run: mvn install -DskipTests  # Install dependencies but skip tests for this step
-      working-directory: ./TestAuto
 
     - name: Run Tests
       run: mvn test  # Run the tests using Maven
