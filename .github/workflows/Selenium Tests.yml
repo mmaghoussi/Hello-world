@@ -11,7 +11,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Using Ubuntu runner; other options: 'windows-latest', 'macos-latest'
+    runs-on: macos-latest  # Using Ubuntu runner; other options: 'windows-latest', 'macos-latest'
 
     services:
       selenium:
@@ -31,10 +31,9 @@ jobs:
         distribution: 'temurin'
         overwrite-settings: false
         
-    - name: Install Dependencies
-      run: mvn install -DskipTests  # Install dependencies but skip tests for this step
-      working-directory: TestAuto/pom.xml
-      
+    - name: Install dependencies and build
+      run: mvn install
+
     - name: Compile Java code
       run: javac TestAuto/src/main/java/OpenPageAv.java
 
