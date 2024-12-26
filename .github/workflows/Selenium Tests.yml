@@ -33,7 +33,7 @@ jobs:
         
     - name: Install Dependencies
       run: mvn install -DskipTests  # Install dependencies but skip tests for this step
-      working-directory: ./TestAuto
+      working-directory: ./TestAuto/pom.xml
       
     - name: Compile Java code
       run: javac TestAuto/src/main/java/OpenPageAv.java
