@@ -32,10 +32,10 @@ jobs:
         overwrite-settings: false
         
     - name: Compile Java code
-      run: javac OpenPageAv.java
+      run: javac TestAuto/src/main/java/OpenPageAv.java
 
     - name: Run Java program
-      run: java OpenPageAv
+      run: java TestAuto/src/main/java/OpenPageAv.java
 
     - name: Install Dependencies
       run: mvn install -DskipTests  # Install dependencies but skip tests for this step
