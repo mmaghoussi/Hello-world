@@ -30,6 +30,12 @@ jobs:
         java-version: '17'  # Specify the version of Java used for the project
         distribution: 'temurin'
         overwrite-settings: false
+        
+    - name: Compile Java code
+      run: OpenPageAv.java
+
+    - name: Run Java program
+      run: java OpenPageAv
 
     - name: Install Dependencies
       run: mvn install -DskipTests  # Install dependencies but skip tests for this step
