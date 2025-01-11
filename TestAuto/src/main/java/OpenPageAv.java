@@ -25,6 +25,7 @@ public class OpenPageAv {
 	    dr.findElement(By.id("private-signin-password")).sendKeys("Maghoussi2015");
 	    
 	    dr.findElement(By.xpath("//*[@id=\"__next\"]/div/main/div[1]/div[2]/div/div[2]/div[3]/button")).click();
+	    System.out.println("Connexion OK pour le site Avito");
 	    
 	   
 
