@@ -40,6 +40,7 @@ public class Operations {
 	    
 	    org.testng.Reporter.log("Connexion OK dans le site");
   }
+  
   @Test(priority = 2)
   public void CloseAvito() {
 	  
