@@ -1,10 +1,13 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.slf4j.helpers.Reporter;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class OpenPageAv {
+	
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -23,7 +26,7 @@ public class OpenPageAv {
 	    
 	    dr.findElement(By.xpath("//*[@id=\"__next\"]/div/main/div[1]/div[2]/div/div[2]/div[3]/button")).click();
 	    
-	    System.out.println("Connexion OK");
+	   
 
 	}
 
