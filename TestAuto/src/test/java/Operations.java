@@ -32,7 +32,7 @@ public class Operations {
   @Test(priority = 1)
   public void LoginAvito() {
 	  
-	  dr.findElement(By.xpath("//*[@id=\"__next\"]/div[2]/nav/div/div[3]/ul/li[3]/span/span")).click();
+	  dr.findElement(By.xpath("//*[@id=\"__next\"]/div[2]/nav/div/div[3]/ul/li[1]/span/span")).click();
 	    dr.findElement(By.id("private-signin-email-or-phone")).sendKeys("maghoussi.marwane@gmail.com");
 	    dr.findElement(By.id("private-signin-password")).sendKeys("Maghoussi2015");
 	    
@@ -45,6 +45,6 @@ public class Operations {
   public void CloseAvito() {
 	  
 	  dr.quit();
-	  org.testng.Reporter.log("Merci pour votre visite a la prochaine fois Bay");
+	  org.testng.Reporter.log("Merci pour votre visite a la prochaine fois");
   }
 }
