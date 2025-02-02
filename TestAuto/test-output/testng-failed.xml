@@ -6,7 +6,7 @@
       <class name="Operations">
         <methods>
           <include name="config"/>
-          <include name="OpenAvito"/>
+          <include name="LoginAvito"/>
         </methods>
       </class> <!-- Operations -->
     </classes>

@@ -45,6 +45,6 @@ public class Operations {
   public void CloseAvito() {
 	  
 	  dr.quit();
-	  org.testng.Reporter.log("Merci pour votre visite a la prochaine fois");
+	  org.testng.Reporter.log("Merci pour votre visite a la prochaine");
   }
 }
