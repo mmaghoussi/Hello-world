@@ -8,36 +8,36 @@
       <![CDATA[Connexion OK dans le site]]>
     </line>
     <line>
-      <![CDATA[Merci pour votre visite a la prochaine fois]]>
+      <![CDATA[Merci pour votre visite a la prochaine bay]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-02-01T19:07:39 EST" name="Default suite" finished-at="2025-02-01T19:07:49 EST" duration-ms="10500">
+  <suite started-at="2025-02-19T10:49:53 EST" name="Default suite" finished-at="2025-02-19T10:50:02 EST" duration-ms="8978">
     <groups>
     </groups>
-    <test started-at="2025-02-01T19:07:39 EST" name="Default test" finished-at="2025-02-01T19:07:49 EST" duration-ms="10500">
+    <test started-at="2025-02-19T10:49:53 EST" name="Default test" finished-at="2025-02-19T10:50:02 EST" duration-ms="8978">
       <class name="Operations">
-        <test-method is-config="true" signature="config()[pri:0, instance:Operations@f80945f]" started-at="2025-02-01T19:07:39 EST" name="config" finished-at="2025-02-01T19:07:39 EST" duration-ms="518" status="PASS">
+        <test-method is-config="true" signature="config()[pri:0, instance:Operations@4372b9b6]" started-at="2025-02-19T10:49:53 EST" name="config" finished-at="2025-02-19T10:49:53 EST" duration-ms="564" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- config -->
-        <test-method signature="OpenAvito()[pri:0, instance:Operations@f80945f]" started-at="2025-02-01T19:07:39 EST" name="OpenAvito" finished-at="2025-02-01T19:07:44 EST" duration-ms="4813" status="PASS">
+        <test-method signature="OpenAvito()[pri:0, instance:Operations@4372b9b6]" started-at="2025-02-19T10:49:53 EST" name="OpenAvito" finished-at="2025-02-19T10:49:53 EST" duration-ms="307" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Ouverture du site avito]]>
             </line>
           </reporter-output>
         </test-method> <!-- OpenAvito -->
-        <test-method signature="LoginAvito()[pri:1, instance:Operations@f80945f]" started-at="2025-02-01T19:07:44 EST" name="LoginAvito" finished-at="2025-02-01T19:07:49 EST" duration-ms="4684" status="PASS">
+        <test-method signature="LoginAvito()[pri:1, instance:Operations@4372b9b6]" started-at="2025-02-19T10:49:54 EST" name="LoginAvito" finished-at="2025-02-19T10:50:01 EST" duration-ms="7724" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Connexion OK dans le site]]>
             </line>
           </reporter-output>
         </test-method> <!-- LoginAvito -->
-        <test-method signature="CloseAvito()[pri:2, instance:Operations@f80945f]" started-at="2025-02-01T19:07:49 EST" name="CloseAvito" finished-at="2025-02-01T19:07:49 EST" duration-ms="421" status="PASS">
+        <test-method signature="CloseAvito()[pri:2, instance:Operations@4372b9b6]" started-at="2025-02-19T10:50:01 EST" name="CloseAvito" finished-at="2025-02-19T10:50:02 EST" duration-ms="322" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Merci pour votre visite a la prochaine fois]]>
+              <![CDATA[Merci pour votre visite a la prochaine bay]]>
             </line>
           </reporter-output>
         </test-method> <!-- CloseAvito -->
