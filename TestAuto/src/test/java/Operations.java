@@ -22,7 +22,7 @@ public class Operations {
 	  
 	  
   }
-  @Test
+  @Test(priority = 0)
   public void OpenAvito() {
 	  
 	  dr.get("https://www.avito.ma");
