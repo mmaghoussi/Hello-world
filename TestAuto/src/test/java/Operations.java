@@ -42,6 +42,14 @@ public class Operations {
   }
   
   @Test(priority = 2)
+  public void FindCar() {
+	  
+	  dr.findElement(By.xpath("//*[@id=\"keyword-suggestion\"]/div/input")).sendKeys("Golf 7");
+	  dr.findElement(By.xpath("//*[@id=\"__next\"]/div[2]/div[1]/div[1]/div/button[3]")).click();
+	  org.testng.Reporter.log("La recherche est bien lancée");
+  }
+  
+  @Test(priority = 3)
   public void CloseAvito() {
 	  
 	  dr.quit();
