@@ -38,7 +38,7 @@ public class Operations {
 	    
 	    dr.findElement(By.xpath("//*[@id=\"__next\"]/div/main/div[1]/div[2]/div/div[2]/div[3]/button")).click();
 	    
-	    org.testng.Reporter.log("Connexion OK dans le site AVITO");
+	    org.testng.Reporter.log("Connexion OK dans le site AVITO Maroc");
   }
   
   @Test(priority = 2)
