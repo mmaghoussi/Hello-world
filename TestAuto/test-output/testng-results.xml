@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Ouverture du site avito]]>
@@ -8,107 +8,43 @@
       <![CDATA[Connexion OK dans le site AVITO ]]>
     </line>
     <line>
+      <![CDATA[La recherche est bien lancée]]>
+    </line>
+    <line>
       <![CDATA[Merci pour votre visite a la prochaine bay]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-02-22T19:40:28 EST" name="Default suite" finished-at="2025-02-22T19:40:37 EST" duration-ms="9554">
+  <suite started-at="2025-02-22T20:13:34 EST" name="Default suite" finished-at="2025-02-22T20:13:56 EST" duration-ms="21245">
     <groups>
     </groups>
-    <test started-at="2025-02-22T19:40:28 EST" name="Default test" finished-at="2025-02-22T19:40:37 EST" duration-ms="9554">
+    <test started-at="2025-02-22T20:13:34 EST" name="Default test" finished-at="2025-02-22T20:13:56 EST" duration-ms="21245">
       <class name="Operations">
-        <test-method is-config="true" signature="config()[pri:0, instance:Operations@ff684e1]" started-at="2025-02-22T19:40:28 EST" name="config" finished-at="2025-02-22T19:40:28 EST" duration-ms="581" status="PASS">
+        <test-method is-config="true" signature="config()[pri:0, instance:Operations@ff684e1]" started-at="2025-02-22T20:13:34 EST" name="config" finished-at="2025-02-22T20:13:35 EST" duration-ms="606" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- config -->
-        <test-method signature="OpenAvito()[pri:0, instance:Operations@ff684e1]" started-at="2025-02-22T19:40:29 EST" name="OpenAvito" finished-at="2025-02-22T19:40:34 EST" duration-ms="5245" status="PASS">
+        <test-method signature="OpenAvito()[pri:0, instance:Operations@ff684e1]" started-at="2025-02-22T20:13:35 EST" name="OpenAvito" finished-at="2025-02-22T20:13:43 EST" duration-ms="8271" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Ouverture du site avito]]>
             </line>
           </reporter-output>
         </test-method> <!-- OpenAvito -->
-        <test-method signature="LoginAvito()[pri:1, instance:Operations@ff684e1]" started-at="2025-02-22T19:40:34 EST" name="LoginAvito" finished-at="2025-02-22T19:40:37 EST" duration-ms="3189" status="PASS">
+        <test-method signature="LoginAvito()[pri:1, instance:Operations@ff684e1]" started-at="2025-02-22T20:13:43 EST" name="LoginAvito" finished-at="2025-02-22T20:13:46 EST" duration-ms="2957" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Connexion OK dans le site AVITO ]]>
             </line>
           </reporter-output>
         </test-method> <!-- LoginAvito -->
-        <test-method signature="FindCar()[pri:2, instance:Operations@ff684e1]" started-at="2025-02-22T19:40:37 EST" name="FindCar" finished-at="2025-02-22T19:40:37 EST" duration-ms="62" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="keyword-suggestion"]/div/input"}
-  (Session info: chrome=133.0.6943.127)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.5', java.version: '16.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [abc885338b0e92653732b9f2e5057f83, findElement {using=xpath, value=//*[@id="keyword-suggestion"]/div/input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.127, chrome: {chromedriverVersion: 133.0.6943.126 (cffa127ce7b..., userDataDir: /var/folders/2s/z2rdv0jd5xd...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57178}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:57178/devtoo..., se:cdpVersion: 133.0.6943.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: abc885338b0e92653732b9f2e5057f83]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="keyword-suggestion"]/div/input"}
-  (Session info: chrome=133.0.6943.127)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.5', java.version: '16.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [abc885338b0e92653732b9f2e5057f83, findElement {using=xpath, value=//*[@id="keyword-suggestion"]/div/input}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 133.0.6943.127, chrome: {chromedriverVersion: 133.0.6943.126 (cffa127ce7b..., userDataDir: /var/folders/2s/z2rdv0jd5xd...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57178}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: mac, proxy: Proxy(), se:cdp: ws://localhost:57178/devtoo..., se:cdpVersion: 133.0.6943.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: abc885338b0e92653732b9f2e5057f83
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at Operations.FindCar(Operations.java:47)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="FindCar()[pri:2, instance:Operations@ff684e1]" started-at="2025-02-22T20:13:46 EST" name="FindCar" finished-at="2025-02-22T20:13:55 EST" duration-ms="8633" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[La recherche est bien lancée]]>
+            </line>
           </reporter-output>
         </test-method> <!-- FindCar -->
-        <test-method signature="CloseAvito()[pri:3, instance:Operations@ff684e1]" started-at="2025-02-22T19:40:37 EST" name="CloseAvito" finished-at="2025-02-22T19:40:37 EST" duration-ms="398" status="PASS">
+        <test-method signature="CloseAvito()[pri:3, instance:Operations@ff684e1]" started-at="2025-02-22T20:13:55 EST" name="CloseAvito" finished-at="2025-02-22T20:13:56 EST" duration-ms="672" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Merci pour votre visite a la prochaine bay]]>

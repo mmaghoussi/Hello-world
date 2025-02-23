@@ -1,6 +1,8 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.helpers.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -19,6 +21,7 @@ public class Operations {
 	  
 	  WebDriverManager.chromedriver().setup();
 	  dr.manage().window().maximize();  
+	  
 	  
 	  
   }
@@ -44,8 +47,11 @@ public class Operations {
   @Test(priority = 2)
   public void FindCar() throws InterruptedException {
 	  
-	  dr.findElement(By.xpath("//*[@id=\"keyword-suggestion\"]/div/input")).sendKeys("Golf 7");
+	
 	  Thread.sleep(1000);
+	  WebElement Find= dr.findElement(By.xpath("//*[@id=\"keyword-suggestion\"]/div/input")); 
+	  Find.sendKeys("Any Car");
+	  
 	  dr.findElement(By.xpath("//*[@id=\"__next\"]/div[2]/div[1]/div[1]/div/button[3]")).click();
 	  org.testng.Reporter.log("La recherche est bien lancée");
   }
