@@ -51,7 +51,7 @@ public class Operations {
 	  Thread.sleep(1000);
 	  WebElement Find= dr.findElement(By.xpath("//*[@id=\"keyword-suggestion\"]/div/input")); 
 	  Find.sendKeys("Any Car");
-	  
+	  Thread.sleep(1000);
 	  dr.findElement(By.xpath("//*[@id=\"__next\"]/div[2]/div[1]/div[1]/div/button[3]")).click();
 	  org.testng.Reporter.log("La recherche est bien lancée");
   }
