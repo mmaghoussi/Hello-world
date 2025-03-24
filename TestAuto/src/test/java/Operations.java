@@ -1,7 +1,9 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.Options;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.helpers.Reporter;
 import org.testng.annotations.AfterTest;
@@ -19,13 +21,22 @@ public class Operations {
   @BeforeTest
   public void config() {
 	  
+	  ChromeOptions option = new ChromeOptions();
+	  
+	  option.addArguments("Configurer Chrome avec AdGuard DNS");
+	  option.addArguments("Configurer Chrome avec AdGuard DNS");
+	  
 	  WebDriverManager.chromedriver().setup();
 	  dr.manage().window().maximize();  
 	  
 	  
 	  
   }
-  @Test(priority = 0)
+  private Object Options() {
+	// TODO Auto-generated method stub
+	return null;
+}
+@Test(priority = 0)
   public void OpenAvito() {
 	  
 	  dr.get("https://www.avito.ma");
@@ -35,7 +46,7 @@ public class Operations {
   @Test(priority = 1)
   public void LoginAvito() {
 	  
-	  dr.findElement(By.xpath("//*[@id=\"__next\"]/div[2]/nav/div/div[3]/ul/li[1]/span/span")).click();
+	    dr.findElement(By.xpath("//*[@id=\"__next\"]/div[2]/nav/div/div[3]/ul/li[1]/span/span")).click();
 	    dr.findElement(By.id("private-signin-email-or-phone")).sendKeys("maghoussi.marwane@gmail.com");
 	    dr.findElement(By.id("private-signin-password")).sendKeys("Maghoussi2015");
 	    
