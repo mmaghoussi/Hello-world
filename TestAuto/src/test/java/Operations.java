@@ -1,3 +1,4 @@
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver.Options;
@@ -32,14 +33,28 @@ public class Operations {
 	  
 	  
   }
-  private Object Options() {
-	// TODO Auto-generated method stub
-	return null;
-}
+  
+
 @Test(priority = 0)
   public void OpenAvito() {
 	  
 	  dr.get("https://www.avito.ma");
+	  try {
+          
+          Alert alert = dr.switchTo().alert();
+          
+         
+          alert.dismiss(); 
+
+          System.out.println("✅ Alerte publicitaire fermée !");
+      } catch (Exception e) {
+          System.out.println("❌ Aucune alerte détectée.");
+      }
+
+      
+      
+  
+		
 	  org.testng.Reporter.log("Ouverture du site avito");
 	  
   }
