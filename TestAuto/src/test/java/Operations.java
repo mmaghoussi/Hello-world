@@ -23,8 +23,8 @@ public class Operations {
 	  
 	  ChromeOptions option = new ChromeOptions();
 	  
-	  option.addArguments("Configurer Chrome avec AdGuard DNS");
-	  option.addArguments("Configurer Chrome avec AdGuard DNS");
+	  option.addArguments("--dns-prefetch-disable");
+	  option.addArguments("--host-resolver-rules=MAP * 94.140.14.14");
 	  
 	  WebDriverManager.chromedriver().setup();
 	  dr.manage().window().maximize();  
