@@ -1,5 +1,6 @@
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriver.Options;
 import org.openqa.selenium.WebElement;
@@ -22,15 +23,11 @@ public class Operations {
   @BeforeTest
   public void config() {
 	  
-	  ChromeOptions option = new ChromeOptions();
-	  
-	  option.addArguments("--dns-prefetch-disable");
-	  option.addArguments("--host-resolver-rules=MAP * 94.140.14.14");
 	  
 	  WebDriverManager.chromedriver().setup();
 	  dr.manage().window().maximize();  
 	  
-	  
+	
 	  
   }
   
@@ -38,23 +35,12 @@ public class Operations {
 @Test(priority = 0)
   public void OpenAvito() {
 	  
-	  dr.get("https://www.avito.ma");
-	  try {
-          
-          Alert alert = dr.switchTo().alert();
-          
-         
-          alert.dismiss(); 
-
-          System.out.println("✅ Alerte publicitaire fermée !");
-      } catch (Exception e) {
-          System.out.println("❌ Aucune alerte détectée.");
-      }
-
+	  dr.get("https://www.avito.ma");		
+	  
+	  JavascriptExecutor js = (JavascriptExecutor) dr;
+      String script = "document.querySelectorAll(\"[id*=popup], [class*=popup], [id*=ad], [class*=ad]\").forEach(e => e.remove());";
+      js.executeScript(script);
       
-      
-  
-		
 	  org.testng.Reporter.log("Ouverture du site avito");
 	  
   }
