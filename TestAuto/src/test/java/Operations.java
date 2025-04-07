@@ -48,10 +48,11 @@ public class Operations {
   public void LoginAvito() {
 	  
 	    dr.findElement(By.xpath("//*[@id=\"__next\"]/div[2]/nav/div/div[3]/ul/li[1]/span/span")).click();
-	    dr.findElement(By.id("private-signin-email-or-phone")).sendKeys("maghoussi.marwane@gmail.com");
-	    dr.findElement(By.id("private-signin-password")).sendKeys("Maghoussi2015");
+	    dr.findElement(By.xpath("//*[@id=\"__next\"]/div/main/div[1]/div[2]/div/div[2]/a")).click();
+	    dr.findElement(By.id("shop-signin-email")).sendKeys("maghoussi.marwane@gmail.com");
+	    dr.findElement(By.id("shop-signin-password")).sendKeys("Maghoussi2015");
 	    
-	    dr.findElement(By.xpath("//*[@id=\"__next\"]/div/main/div[1]/div[2]/div/div[2]/div[3]/button")).click();
+	    dr.findElement(By.xpath("//*[@id=\"__next\"]/div/main/div[1]/div[2]/div/div/div[2]/form/button")).click();
 	    
 	    org.testng.Reporter.log("Connexion OK dans le site AVITO ");
   }
@@ -64,7 +65,7 @@ public class Operations {
 	  WebElement Find= dr.findElement(By.xpath("//*[@id=\"keyword-suggestion\"]/div/input")); 
 	  Find.sendKeys("Any Car");
 	  Thread.sleep(1000);
-	  dr.findElement(By.xpath("//*[@id=\"__next\"]/div[2]/div[1]/div[1]/div/button[2]")).click();
+	  dr.findElement(By.xpath("//*[@id=\"__next\"]/div[2]/div[2]/div[1]/div/button[2]")).click();
 	  org.testng.Reporter.log("La recherche est bien lancée");
   }
   
