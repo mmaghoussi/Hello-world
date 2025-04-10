@@ -6,7 +6,6 @@
       <class name="Operations">
         <methods>
           <include name="config"/>
-          <include name="LoginAvito"/>
           <include name="FindCar"/>
         </methods>
       </class> <!-- Operations -->
