@@ -17,17 +17,27 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class Operations {
-	
-	WebDriver dr= new ChromeDriver();
+	 
+     
+     
+     
+	  WebDriver dr;
 	
   @BeforeTest
-  public void config() {
+ public void config() {
 	  
 	  
-	  WebDriverManager.chromedriver().setup();
+	  ChromeOptions options = new ChromeOptions();
+	  
+	  
+      options.addArguments("--headless"); // Mode headless
+      options.addArguments("--disable-gpu"); // (Optionnel pour Windows)
+      options.addArguments("--window-size=1920,1080");
+      
+      dr=new ChromeDriver(options);
+      WebDriverManager.chromedriver().setup();
 	  dr.manage().window().maximize();  
 	  
-	
 	  
   }
   
