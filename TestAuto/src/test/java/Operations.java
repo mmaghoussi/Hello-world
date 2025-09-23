@@ -26,18 +26,20 @@ public class Operations {
   @BeforeTest
  public void config() {
 	  
+	  dr=new ChromeDriver();
 	  
-	  ChromeOptions options = new ChromeOptions();
-	  
-	  
-      options.addArguments("--headless"); // Mode headless
-      options.addArguments("--disable-gpu"); // (Optionnel pour Windows)
-      options.addArguments("--window-size=1920,1080");
-      
-      dr=new ChromeDriver(options);
-      WebDriverManager.chromedriver().setup();
-	  dr.manage().window().maximize();  
-	  
+//	  
+//	  ChromeOptions options = new ChromeOptions();
+//	  
+//	  
+//      options.addArguments("--headless"); // Mode headless
+//      options.addArguments("--disable-gpu"); // (Optionnel pour Windows)
+//      options.addArguments("--window-size=1920,1080");
+//      
+//      dr=new ChromeDriver(options);
+//      WebDriverManager.chromedriver().setup();
+//	  dr.manage().window().maximize();  
+//	  
 	  
   }
   
@@ -68,7 +70,7 @@ public class Operations {
 	    
 	    org.testng.Reporter.log("Connexion OK dans le site AVITO ");
 	    
-	    dr.findElement(By.xpath("//*[@id=\"__next\"]/div/nav/div/div[1]/a/span/img")).click();
+	    //dr.findElement(By.xpath("//*[@id=\"__next\"]/div/nav/div/div[1]/a/span/img")).click();
   }
   
   @Test(priority = 2)
@@ -82,6 +84,7 @@ public class Operations {
 	  dr.findElement(By.xpath("//*[@id=\"__next\"]/div[2]/div[1]/div[1]/div/button[2]")).click();
 	  org.testng.Reporter.log("La recherche est bien lancée");
   }
+
   
   @Test(priority = 3)
   public void CloseAvito() {
