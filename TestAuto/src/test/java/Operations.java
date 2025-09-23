@@ -8,7 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.helpers.Reporter;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -21,10 +23,12 @@ public class Operations {
      
      
      
-	  WebDriver dr;
+	WebDriver dr;
 	
   @BeforeTest
  public void config() {
+	  
+	  
 	  
 	  dr=new ChromeDriver();
 	  
@@ -44,7 +48,7 @@ public class Operations {
   }
   
 
-@Test(priority = 0)
+  @Test(priority = 2)
   public void OpenAvito() {
 	  
 	  dr.get("https://www.avito.ma");		
@@ -56,7 +60,7 @@ public class Operations {
 	  org.testng.Reporter.log("Ouverture du site avito");
 	  
   }
-  @Test(priority = 1)
+  @Test(priority = 3)
   public void LoginAvito() {
 	  
 	   dr.findElement(By.xpath("//*[@id=\"__next\"]/div/nav/div/div[3]/ul/li[1]/span/span")).click();
@@ -73,7 +77,7 @@ public class Operations {
 	    //dr.findElement(By.xpath("//*[@id=\"__next\"]/div/nav/div/div[1]/a/span/img")).click();
   }
   
-  @Test(priority = 2)
+  @Test(priority = 4)
   public void FindCar() throws InterruptedException {
 	  
 	
@@ -86,7 +90,7 @@ public class Operations {
   }
 
   
-  @Test(priority = 3)
+  @AfterTest
   public void CloseAvito() {
 	  
 	  dr.quit();
