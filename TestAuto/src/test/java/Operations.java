@@ -90,7 +90,7 @@ public class Operations {
   }
 
   
-  @AfterTest
+  @Test(priority = 5)
   public void CloseAvito() {
 	  
 	  dr.quit();
