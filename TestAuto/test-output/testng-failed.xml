@@ -5,8 +5,10 @@
     <classes>
       <class name="Operations">
         <methods>
+          <include name="CloseAvito"/>
           <include name="config"/>
           <include name="LoginAvito"/>
+          <include name="FindCar"/>
         </methods>
       </class> <!-- Operations -->
     </classes>

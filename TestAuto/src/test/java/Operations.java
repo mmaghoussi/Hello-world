@@ -57,7 +57,7 @@ public class Operations {
       String script = "document.querySelectorAll(\"[id*=popup], [class*=popup], [id*=ad], [class*=ad]\").forEach(e => e.remove());";
       js.executeScript(script);
       
-	  org.testng.Reporter.log("Ouverture du site avito");
+	  org.testng.Reporter.log("Ouverture du site avito", true);
 	  
   }
   @Test(priority = 3)
@@ -72,7 +72,7 @@ public class Operations {
 	    dr.findElement(By.xpath("//*[@id=\"__next\"]/div/main/div[1]/div[2]/div/div/div[2]/form/button")).click();
 	    
 	    
-	    org.testng.Reporter.log("Connexion OK dans le site AVITO ");
+	    org.testng.Reporter.log("Connexion OK dans le site AVITO ", true);
 	    
 	    //dr.findElement(By.xpath("//*[@id=\"__next\"]/div/nav/div/div[1]/a/span/img")).click();
   }
@@ -86,7 +86,7 @@ public class Operations {
 	  Find.sendKeys("Any Car");
 	  Thread.sleep(1000);
 	  dr.findElement(By.xpath("//*[@id=\"__next\"]/div[2]/div[1]/div[1]/div/button[2]")).click();
-	  org.testng.Reporter.log("La recherche est bien lancée parfaitement");
+	  org.testng.Reporter.log("La recherche est bien lancée parfaitement", true);
   }
 
   
@@ -94,6 +94,6 @@ public class Operations {
   public void CloseAvito() {
 	  
 	  dr.quit();
-	  org.testng.Reporter.log("Merci pour votre visite a la prochaine bay");
+	  org.testng.Reporter.log("Merci pour votre visite a la prochaine bay", true);
   }
 }
