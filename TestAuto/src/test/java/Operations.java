@@ -92,8 +92,8 @@ public class Operations {
   
   @Test(priority = 5)
   public void CloseAvito() {
-	  
-	  dr.quit();
 	  org.testng.Reporter.log("Merci pour votre visite a la prochaine bay", true);
+	  dr.quit();
+	  
   }
 }
