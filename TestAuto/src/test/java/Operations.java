@@ -48,7 +48,7 @@ public class Operations {
   }
   
 
-  @Test(priority = 2)
+  @Test(priority = 1)
   public void OpenAvito() {
 	  
 	  dr.get("https://www.avito.ma");		
@@ -60,7 +60,7 @@ public class Operations {
 	  org.testng.Reporter.log("Ouverture du site avito", true);
 	  
   }
-  @Test(priority = 3)
+  @Test(priority = 2)
   public void LoginAvito() {
 	  
 	   dr.findElement(By.xpath("//*[@id=\"__next\"]/div/nav/div/div[3]/ul/li[1]/span/span")).click();
@@ -77,7 +77,7 @@ public class Operations {
 	    //dr.findElement(By.xpath("//*[@id=\"__next\"]/div/nav/div/div[1]/a/span/img")).click();
   }
   
-  @Test(priority = 4)
+  @Test(priority = 3)
   public void FindCar() throws InterruptedException {
 	  
 	
@@ -90,10 +90,10 @@ public class Operations {
   }
 
   
-  @Test(priority = 5)
+  @Test(priority = 4)
   public void CloseAvito() {
-	  org.testng.Reporter.log("Merci pour votre visite a la prochaine bay", true);
-	  dr.quit();
 	  
+	  dr.quit();
+	  org.testng.Reporter.log("Merci pour votre visite a la prochaine bay", true);
   }
 }
