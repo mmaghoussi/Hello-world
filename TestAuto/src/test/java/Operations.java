@@ -1,3 +1,5 @@
+import java.time.Duration;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -6,6 +8,7 @@ import org.openqa.selenium.WebDriver.Options;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.helpers.Reporter;
 import org.testng.annotations.AfterMethod;
@@ -25,7 +28,7 @@ public class Operations {
      
 	WebDriver dr;
 	
-  @BeforeTest
+  @Test(priority = 0)
  public void config() {
 	  
 	  
@@ -49,9 +52,14 @@ public class Operations {
   
 
   @Test(priority = 1)
-  public void OpenAvito() {
+  public void OpenAvito() throws InterruptedException {
 	  
 	  dr.get("https://www.avito.ma");		
+	  
+	   dr.findElement(By.xpath("/html/body/div/div/div/nav/div/div[3]/ul/li[1]/span/span")).click();
+	   dr.findElement(By.xpath("/html/body/div[1]/div/main/div[1]/div[2]/div/div[2]/button")).click();
+	  
+	  
 	  
 	  JavascriptExecutor js = (JavascriptExecutor) dr;
       String script = "document.querySelectorAll(\"[id*=popup], [class*=popup], [id*=ad], [class*=ad]\").forEach(e => e.remove());";
@@ -59,12 +67,14 @@ public class Operations {
       
 	  org.testng.Reporter.log("Ouverture du site avito", true);
 	  
-  }
-  @Test(priority = 2)
-  public void LoginAvito() {
 	  
-	   dr.findElement(By.xpath("//*[@id=\"__next\"]/div/nav/div/div[3]/ul/li[1]/span/span")).click();
-	   dr.findElement(By.xpath("//*[@id=\"__next\"]/div/main/div[1]/div[2]/div/div[2]/button")).click();
+  }
+  
+  @Test(priority = 2)
+  public void LoginAvito() throws InterruptedException {
+	    
+	   
+	   
 	   
 	    
 	    dr.findElement(By.id("shop-signin-email")).sendKeys("maghoussi.marwane@gmail.com");
@@ -72,7 +82,12 @@ public class Operations {
 	    dr.findElement(By.xpath("//*[@id=\"__next\"]/div/main/div[1]/div[2]/div/div/div[2]/form/button")).click();
 	    
 	    
+	    
+	  
+	    
 	    org.testng.Reporter.log("Connexion OK dans le site AVITO ", true);
+	    
+	    Thread.sleep(2000);
 	    
 	    //dr.findElement(By.xpath("//*[@id=\"__next\"]/div/nav/div/div[1]/a/span/img")).click();
   }
@@ -80,12 +95,16 @@ public class Operations {
   @Test(priority = 3)
   public void FindCar() throws InterruptedException {
 	  
+	WebDriverWait wait = new WebDriverWait(dr,Duration.ofSeconds(10));
 	
-	  Thread.sleep(1000);
-	  WebElement Find= dr.findElement(By.xpath("//*[@id=\"keyword-suggestion\"]/div/input")); 
+	  
+	  dr.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div/div/form/div/input")).click();
+	  WebElement Find= wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(("//*[@id=\"keyword-suggestion\"]/div/input"))));
+	  
 	  Find.sendKeys("Any Car");
-	  Thread.sleep(1000);
-	  dr.findElement(By.xpath("//*[@id=\"__next\"]/div[2]/div[1]/div[1]/div/button[2]")).click();
+	  
+	  
+	  dr.findElement(By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div/button[3]")).click();
 	  org.testng.Reporter.log("La recherche est bien lancée parfaitement", true);
   }
 
