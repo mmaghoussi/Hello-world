@@ -5,35 +5,35 @@
       <![CDATA[Ouverture du site avito]]>
     </line>
     <line>
-      <![CDATA[COnexion OK]]>
+      <![CDATA[Conexion OK]]>
     </line>
     <line>
-      <![CDATA[Recher bien lancée]]>
+      <![CDATA[Affichage des annonces]]>
     </line>
   </reporter-output>
-  <suite started-at="2026-03-05T14:03:01 EST" name="Default suite" finished-at="2026-03-05T14:03:42 EST" duration-ms="41067">
+  <suite started-at="2026-03-06T15:46:43 EST" name="Default suite" finished-at="2026-03-06T15:47:10 EST" duration-ms="27276">
     <groups>
     </groups>
-    <test started-at="2026-03-05T14:03:01 EST" name="Default test" finished-at="2026-03-05T14:03:42 EST" duration-ms="41067">
+    <test started-at="2026-03-06T15:46:43 EST" name="Default test" finished-at="2026-03-06T15:47:10 EST" duration-ms="27276">
       <class name="Operations">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Operations@4681c175]" started-at="2026-03-05T14:03:01 EST" name="setup" finished-at="2026-03-05T14:03:06 EST" duration-ms="4443" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Operations@4681c175]" started-at="2026-03-06T15:46:43 EST" name="setup" finished-at="2026-03-06T15:46:51 EST" duration-ms="8057" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Ouverture du site avito]]>
             </line>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="LoginAvito()[pri:0, instance:Operations@4681c175]" started-at="2026-03-05T14:03:06 EST" name="LoginAvito" finished-at="2026-03-05T14:03:31 EST" duration-ms="25874" status="PASS">
+        <test-method signature="LoginAvito()[pri:0, instance:Operations@4681c175]" started-at="2026-03-06T15:46:51 EST" name="LoginAvito" finished-at="2026-03-06T15:47:01 EST" duration-ms="9625" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[COnexion OK]]>
+              <![CDATA[Conexion OK]]>
             </line>
           </reporter-output>
         </test-method> <!-- LoginAvito -->
-        <test-method signature="FinCars()[pri:1, instance:Operations@4681c175]" started-at="2026-03-05T14:03:32 EST" name="FinCars" finished-at="2026-03-05T14:03:42 EST" duration-ms="10487" status="PASS">
+        <test-method signature="FinCars()[pri:1, instance:Operations@4681c175]" started-at="2026-03-06T15:47:01 EST" name="FinCars" finished-at="2026-03-06T15:47:10 EST" duration-ms="9338" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Recher bien lancée]]>
+              <![CDATA[Affichage des annonces]]>
             </line>
           </reporter-output>
         </test-method> <!-- FinCars -->

@@ -1,23 +1,8 @@
-import java.time.Duration;
-
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriver.Options;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.slf4j.helpers.Reporter;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 
 
 public class Operations {
@@ -51,6 +36,7 @@ public class Operations {
 		av.OpenBoutique();
 		av.SetEmailAndPassword("maghoussi.marwane@gmail.com", "Maghoussi2015");
 		av.CliqueConnectButton();
+		org.testng.Reporter.log("Conexion OK", true);
 		
 	}
     @Test(priority = 1)
@@ -58,5 +44,7 @@ public class Operations {
     	
 		av.FinCar("GOlf 7");
 		av.Search();
+		av.ClicAnnonce();
+		org.testng.Reporter.log("Affichage des annonces", true);
 	}
 }

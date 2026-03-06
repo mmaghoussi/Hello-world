@@ -24,7 +24,7 @@ public class AvitoPOM {
 	//Locator pour le test recherche voiture
 	By TextSeach = By.xpath("//input[contains(@placeholder,'recherchez')]");
 	By SeachButton= By.xpath("/html/body/div[1]/div[2]/div[2]/div[1]/div/button[3]");
-	
+	By AnonceButton = By.xpath("/html/body/div[1]/div/main/div/div[1]/div[1]/aside/div[3]/button");
 	
 	WebDriverWait wait;
 	
@@ -61,7 +61,7 @@ public class AvitoPOM {
 	public void CliqueConnectButton() {
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(connect)).click();
-		Reporter.log("COnexion OK");
+		
 	}
 	
 	public void FinCar(String CarName) {
@@ -71,7 +71,12 @@ public class AvitoPOM {
 	public void Search() {
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(SeachButton)).click();
-		Reporter.log("Recher bien lancée");
+		
+	}
+	
+	public void ClicAnnonce() {
+		
+		wait.until(ExpectedConditions.elementToBeClickable(AnonceButton)).click();
 	}
 	
 		
