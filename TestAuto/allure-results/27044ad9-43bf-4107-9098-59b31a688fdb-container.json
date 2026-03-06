@@ -1,0 +1,1 @@
+{"uuid":"27044ad9-43bf-4107-9098-59b31a688fdb","name":"Operations.OpenAvito","children":["c7630491-cb2f-454d-a3ee-7b2cc664c7ab"],"description":"","befores":[{"name":"OpenAvito","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1758667022494,"stop":1758667047372}],"afters":[],"start":1758667022494,"stop":1758667047374}

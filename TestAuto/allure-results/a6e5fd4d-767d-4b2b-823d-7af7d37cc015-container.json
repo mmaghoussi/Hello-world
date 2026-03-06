@@ -1,0 +1,1 @@
+{"uuid":"a6e5fd4d-767d-4b2b-823d-7af7d37cc015","name":"Operations.CloseAvito","children":["170aa542-1f25-4696-96cb-79e801ac4532"],"description":"","befores":[],"afters":[{"name":"CloseAvito","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1758667132196,"stop":1758667132666}],"start":1758667132195,"stop":1758667132666}
